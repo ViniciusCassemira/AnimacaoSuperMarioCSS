@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@keyframes mario{
+    0%{
+        margin-left: 0%;
+    }
+    50%{
+        margin-left: 50%;
+        margin-bottom: 0px
+    }
+    55%{
+        margin-bottom: 40px;
+    }
+    60%{
+        margin-bottom: 0px;
+    }
+    100%{
+        margin-left: 100%;
+    }
+}
+
+@keyframes fundo{
+    0%{
+        background-position-x:100%;
+    }
+    100%{
+        background-position-x: 0%;
+    }
+}
+
+body{
+    background-image: url(./img/back.png);
+    background-repeat: repeat-x;
+    overflow: hidden;
+
+    border: 1px solid red;
+
+    animation-name: fundo;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.container{
+    height: 438px;
+    position: relative;
+
+    display: flex;
+    align-items: end;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.mario{
+    border: 1px solid pink;
+    position: relative;
+
+    animation-name: mario;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
